@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor Eterno ❤️</title>
+    <meta name="description" content="Um site especial dedicado ao nosso amor eterno. Galeria de memórias, frases românticas e muito carinho.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Player de Música -->
+        <audio id="romantic-audio" loop autoplay>
+            <source src="mp3/mutanoZip.mp3" type="audio/mpeg">
+        </audio>
+
+    <!-- Sons do Quiz -->
+    <audio id="correct-sound" preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wrong-sound" preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/fail-buzzer-02.mp3" type="audio/mpeg">
+    </audio>
+
+
+
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-heart">💕</span>
+                <span class="logo-text">Nosso Amor</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Corações Flutuantes -->
+    <div id="floating-hearts"></div>
+
+    <!-- Seção Hero -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="rainbow-text">Eu te amo</h1>
+            <div class="heart-animation">
+                <span class="heart pulse-heart">❤️</span>
+                <span class="heart pulse-heart" style="animation-delay: 0.5s;">💕</span>
+                <span class="heart pulse-heart" style="animation-delay: 1s;">💖</span>
+            </div>
+            <h2 class="subtitle">Minha Princesa</h2>
+            <p class="hero-description">
+                Cada momento ao seu lado é um presente. Você é a luz que ilumina meus dias 
+                e a razão do meu sorriso. Este site é uma pequena demonstração do meu amor infinito por você.
+            </p>
+            <button class="cta-button" onclick="scrollToSection('galeria')">
+                Ver Nossas Memórias ❤️
+            </button>
+        </div>
+    </section>
+
+    <!-- Galeria de Fotos -->
+    <section id="galeria" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Nossa Galeria de Amor</h2>
+            <p class="section-subtitle">Momentos especiais que guardamos no coração</p>
+            
+            <div class="gallery-category">
+                <h3 class="category-title">Uma dos nossos primeiros beijos em foto</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openModal('img/img1.jpg')">
+                        <div class="photo-frame">
+                            <img src="img/img1.jpg" alt="Jantar romântico">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Dia especial e top</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+                        <div class="photo-frame">
+                            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Casal na praia">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Passeios Românticos</h4>
+                            <p>Caminhadas de mãos dadas, criando memórias</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+                        <div class="photo-frame">
+                            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Piquenique">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Piqueniques Especiais</h4>
+                            <p>Momentos simples que se tornaram preciosos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-category">
+                <h3 class="category-title">Nossas Aventuras Juntos</h3>
+                <div class="gallery-grid adventure-grid">
+                    <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1519904981063-b0cf448d479e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+                        <div class="photo-frame">
+                            <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Cidade">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Explorando a Cidade</h4>
+                            <p>Descobrindo novos lugares juntos</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+                        <div class="photo-frame">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Montanhas">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Aventuras na Natureza</h4>
+                            <p>Admirando a beleza natural ao seu lado</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+                        <div class="photo-frame">
+                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Viagem">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Viagens Inesquecíveis</h4>
+                            <p>Criando memórias pelo mundo</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600')">
+                        <div class="photo-frame">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Praia paradisíaca">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Momentos Paradisíacos</h4>
+                            <p>Nosso próprio paraíso encontrado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timer do Relacionamento -->
+    <section id="tempo" class="timer-section">
+        <div class="container">
+            <h2 class="section-title">Nosso Tempo Juntos</h2>
+            <div class="timer-container">
+                <div class="timer-display">
+                    <div class="time-unit">
+                        <div class="time-number" id="years">1</div>
+                        <div class="time-label">Ano</div>
+                    </div>
+                    <div class="time-unit">
+                        <div class="time-number" id="months">3</div>
+                        <div class="time-label">Meses</div>
+                    </div>
+                    <div class="time-unit">
+                        <div class="time-number" id="days">0</div>
+                        <div class="time-label">Dias</div>
+                    </div>
+                    <div class="time-unit">
+                        <div class="time-number" id="hours">0</div>
+                        <div class="time-label">Horas</div>
+                    </div>
+                </div>
+                <p class="timer-message">E cada segundo que passa, meu amor por você só cresce! ❤️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frases Românticas com Personagens -->
+    <section id="frases" class="quotes-section">
+        <div class="container">
+            <h2 class="section-title">Frases do Nosso Amor</h2>
+            <div class="quote-container">
+                <div class="quote-display">
+                    <div class="quote-character">
+                        <img id="quote-character-img" src="img-frase/leao.jpeg" alt="Casal romântico">
+                    </div>
+                    <div class="quote-content">
+                        <blockquote id="current-quote">
+                            "Você me completa."
+                        </blockquote>
+                        <cite id="quote-author">- Meu coração para você</cite>
+                    </div>
+                </div>
+                <div class="quote-indicators">
+                    <!-- Indicadores serão criados via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carta de Amor Interativa -->
+    <section id="carta" class="letter-section">
+        <div class="container">
+            <h2 class="section-title">Carta de Amor Interativa</h2>
+            <div class="letter-container">
+                <div class="letter-envelope" id="letter-envelope" onclick="openLetter()">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                        <div class="heart-seal">💌</div>
+                    </div>
+                    <p class="envelope-text">Clique para abrir minha carta ❤️</p>
+                </div>
+                
+                <div class="letter-content" id="letter-content" style="display: none;">
+                    <div class="letter-paper">
+                        <div class="letter-header">
+                            <h3>Para minha princesa ❤️</h3>
+                            <p class="letter-date"></p>
+                        </div>
+                        
+                        <div class="letter-body">
+                            <p>Meu amor,</p>
+                            
+                            <p>Amor, eu não paro de pensar em como tudo aconteceu de um jeito tão mágico, como se fosse um sonho que virou realidade. Nosso primeiro beijo, naquela biblioteca silenciosa, foi tão inesperado e ao mesmo tempo tão perfeito. O mundo pareceu parar — só existíamos nós dois ali, entre livros e aquele cheiro de histórias, enquanto nossos lábios se encontravam pela primeira vez. Foi o momento em que tudo mudou, quando você deixou de ser só alguém especial para se tornar a pessoa que eu quero ter do meu lado pra sempre.</p>
+                            
+                            <p>Cada ficada nossa foi uma nova descoberta, um pedaço de nós que a gente ia revelando com carinho e vontade. Eram risos, sussurros, olhares que falavam mais do que palavras. Você me ensinou que amar é também se permitir sentir tudo, intensamente, sem medo, com aquele desejo doce que só cresce.</p>
+                            
+                            <p>E o nosso primeiro sexo... ah, amor, foi o momento em que nossos corpos e almas se encontraram de um jeito tão profundo que eu nunca imaginei ser possível. Foi entrega, confiança e também uma celebração da nossa conexão única. Foi quando eu soube que queria você em cada parte da minha vida, para sempre.
+
+E sabe o que mais me encanta? É que nosso aniversário é no mesmo mês, em janeiro. É como se o universo tivesse feito questão de juntar tudo que é nosso em um só tempo, celebrando nosso amor em dose dupla. Cada janeiro é um lembrete do quanto somos sortudos por nos termos encontrado, por podermos comemorar juntos essa sintonia que só cresce.</p>
+                            
+                            <p>Nossa viagem para Brasília foi um capítulo à parte. Passar aqueles dias com você, conhecendo lugares, dividindo sonhos e planejando um futuro, fez tudo ficar ainda mais real. Nas ruas da cidade, entre risadas e mãos dadas, eu entendi que o que eu sentia não era só paixão passageira — era amor verdadeiro, companheirismo, cumplicidade.</p>
+
+                            <p>Eu te amo mais do que palavras podem dizer. E agradeço todos os dias por cada momento ao seu lado — desde aquele beijo tímido na biblioteca até hoje, quando nosso amor já é forte, maduro e cheio de esperança. Quero viver cada capítulo dessa história linda que estamos escrevendo juntos, com você.</p>
+                            
+                            <p class="letter-signature">
+                                Com todo meu amor,<br>
+                                Seu eterno namorado ❤️
+                            </p>
+                        </div>
+                        
+                        <button class="close-letter-btn" onclick="closeLetter()">
+                            Fechar Carta
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3 class="footer-title">Para sempre seu ❤️</h3>
+            <p class="footer-text">
+                Este site foi feito com todo amor e carinho especialmente para você, minha princesa.
+            </p>
+            <p class="footer-copyright">
+                Criado com 💕 em 2025 | Nosso amor eterno
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal para Imagens -->
+    <div id="image-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Foto ampliada">
+        </div>
+    </div>
+
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
