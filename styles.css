@@ -1129,7 +1129,7 @@ body {
     }
     
     .gallery-item img {
-        height: 180px;
+        height: 450px;/*mudar dps*/
     }
     
     .quote-character img {
@@ -1188,6 +1188,9 @@ body {
         padding: 5px 8px;
     }
     
+    .gallery-item img {
+        height: 450px;/*mudar dps*/
+    }
     .music-player {
         bottom: 10px;
         right: 5px;
