@@ -10,12 +10,9 @@
 </head>
 <body>
     <!-- Player de Música -->
-       <!-- Player de Música -->
-<audio id="romantic-audio" autoplay loop>
-  <source src="mp3/mutanoZip.mp3" type="audio/mpeg">
-  Seu navegador não suporta o áudio.
-</audio>
-
+        <audio id="romantic-audio" loop autoplay>
+            <source src="mp3/mutanoZip.mp3" type="audio/mpeg">
+        </audio>
 
     <!-- Sons do Quiz -->
     <audio id="correct-sound" preload="auto">
@@ -150,12 +147,20 @@
             <div class="timer-container">
                 <div class="timer-display">
                     <div class="time-unit">
-                        <div class="time-number">1</div>
+                        <div class="time-number" id="years">0</div>
                         <div class="time-label">Ano</div>
                     </div>
                     <div class="time-unit">
-                        <div class="time-number" >3</div>
+                        <div class="time-number" id="months">0</div>
                         <div class="time-label">Meses</div>
+                    </div>
+                    <div class="time-unit">
+                        <div class="time-number" id="days">0</div>
+                        <div class="time-label">Dia</div>
+                    </div>
+                    <div class="time-unit">
+                        <div class="time-number" id="hours">0</div>
+                        <div class="time-label">Hora</div>
                     </div>
                 </div>
                 <p class="timer-message">E cada segundo que passa, meu amor por você só cresce! ❤️</p>

@@ -139,27 +139,26 @@ function initializeFloatingHearts() {
     setInterval(createHeart, 2000);
 }
 
-// Timer do relacionamento
 function initializeRelationshipTimer() {
     function updateTimer() {
-        const startDate = new Date('2023-10-15'); // Ajuste para a data real
-        const now = new Date();
-        const diffTime = now.getTime() - startDate.getTime();
-        
-        const years = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 365));
-        const months = Math.floor((diffTime % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)) + 3;
-        const days = Math.floor((diffTime % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        
-        document.getElementById('years').textContent = Math.max(1, years);
-        document.getElementById('months').textContent = Math.max(3, months);
+        const years = 1;
+        const months = 3;
+        const days = 1;
+        const hours = 1;
+
+        // Atualiza os elementos do HTML
+        document.getElementById('years').textContent = years;
+        document.getElementById('months').textContent = months;
         document.getElementById('days').textContent = days;
         document.getElementById('hours').textContent = hours;
     }
-    
-    updateTimer();
-    setInterval(updateTimer, 3600000); // Atualizar a cada hora
+
+    updateTimer(); // Atualiza imediatamente
+    setInterval(updateTimer, 60 * 1000); // Mantém a estrutura ativa, caso queira alterar futuramente
 }
+
+initializeRelationshipTimer();
+
 
 // Frases românticas
 function initializeRomanticQuotes() {
